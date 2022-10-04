@@ -8,12 +8,23 @@ namespace SoftUniParking
 {
     public class Parking
     {
+        private int capacity;
         public Parking(int capacity)
         {
             Capacity = capacity;
         }
         public List<Car> Cars = new List<Car>();
-        public int Capacity { get; set; }
+        public int Capacity
+        {
+            get 
+            {
+                return this.capacity;
+            }
+            set 
+            {
+                this.capacity = value;
+            }
+        }
         public int Count { get { return Cars.Count; } }
         public bool CheckCapacity()
         {
